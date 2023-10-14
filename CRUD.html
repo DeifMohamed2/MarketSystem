@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>CRUDS</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="head">
+            <h2>Welcome To Market System</h2>
+            <p> Management SYSTEM</p>
+        </div>
+       
+                <div class="row">
+
+                    <div class="col-md-3"><input type="number" placeholder="Cash"></div>
+                    <div class="col-md-3"><textarea  placeholder="Note For cash" cols="30" rows="2"></textarea></div>
+                    <div class="col-md-3"><input type="number" placeholder="Cash Withdraw"></div>
+                    <div class="col-md-3"><textarea  placeholder="Note For Cash Withdraw" cols="30" rows="2"></textarea></div>
+                    <div class="col-md-3"><input type="number" placeholder="Creidt"></div>
+                    <div class="col-md-3"><textarea  placeholder="Note For Creidt " cols="30" rows="2"></textarea></div>
+                    <div class="col-md-3"><input type="number" placeholder="Creidt Withdraw"></div>
+                    <div class="col-md-3"><textarea  placeholder="Note For Creidt Withdraw" cols="30" rows="2"></textarea></div>
+                    <button class="Add mx-auto">Add</button>
+
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="totals">
+                        <div class="row debosit">
+                        <div class="col-md-4">Total Of Cash : <span  class="NOftotal">1241</span>$ </div>
+                        <div class="col-md-4">Total Of Creidt : <span class="NOftotal">313</span>$ </div>
+                        <div class="col-md-4">Total Of Both : <span class="NOftotal">41</span>$</div>
+                        </div>
+                        <br>
+                        
+                        <div class="row Withdraw" >
+                        <div class="col-md-4">Total Of Cash Withdraw : <span class="NOftotal">34</span>$ </div>
+                        <div class="col-md-4">Total Of Creidt Withdraw : <span class="NOftotal">13</span>$ </div>
+                        <div class="col-md-4">Total Of Both : <span class="NOftotal">43</span>$</div>
+                         </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                   <div class="tabel mx-auto">
+                    <table class="table table-hover  ">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Cash</th>
+                            <th scope="col">Creidt</th>
+                            <th scope="col" style="color: rgb(3, 164, 3);" >Total</th>
+                            <th scope="col">Cash Withdraw</th>
+                            <th scope="col">Creidt Withdraw</th>
+                            <th scope="col" style="color: rgb(205, 40, 18);" >Total</th>
+                            <th scope="col" >date&Time</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>14<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>9/11/2023 09:12pm</td>
+
+                            <td><button >Update</button></td>
+                            <td><button class="del">Delete</button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>14<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>9/11/2023 09:12pm</td>
+
+                            <td><button >Update</button></td>
+                            <td><button  class="del">Delete</button></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>14<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>15<span> $</span></td>
+                            <td>9/11/2023 09:12pm</td>
+
+                            <td><button >Update</button></td>
+                            <td><button  class="del">Delete</button></td>
+                          </tr>
+                        </tbody>
+                     </table>
+                   </div> 
+                </div>
+    
+       
+
+
+
+      
+    </div>
+
+    <script src="./asset/bootstrap.bundle.min.js"></script>
+
+    <script src="table2excel.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+
+</html>
