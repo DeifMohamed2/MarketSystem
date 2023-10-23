@@ -19,35 +19,50 @@
             <p> Management SYSTEM</p>
         </div>
        
-                <div class="row">
-
-                    <div class="col-md-3"><input type="number" placeholder="Cash"></div>
-                    <div class="col-md-3"><textarea  placeholder="Note For cash" cols="30" rows="2"></textarea></div>
-                    <div class="col-md-3"><input type="number" placeholder="Cash Withdraw"></div>
-                    <div class="col-md-3"><textarea  placeholder="Note For Cash Withdraw" cols="30" rows="2"></textarea></div>
-                    <div class="col-md-3"><input type="number" placeholder="Creidt"></div>
-                    <div class="col-md-3"><textarea  placeholder="Note For Creidt " cols="30" rows="2"></textarea></div>
-                    <div class="col-md-3"><input type="number" placeholder="Creidt Withdraw"></div>
-                    <div class="col-md-3"><textarea  placeholder="Note For Creidt Withdraw" cols="30" rows="2"></textarea></div>
-                    <button class="Add mx-auto">Add</button>
-
-                </div>
+               
+                    <form method="POST"  id="mainForm">
+                  <div class="row">
+                    <div class="col-md-3"><input type="number" name="Cash" id="Cash" placeholder="Cash"></div>
+                    <div class="col-md-3"><textarea  placeholder="Note For cash" name="CashNote" id="CashNote"  cols="30" rows="2"></textarea></div>
+                    <div class="col-md-3"><input type="number" name="CashWithdraw" id="CashWithdraw" placeholder="Cash Withdraw"></div>
+                    <div class="col-md-3"><textarea  placeholder="Note For Cash Withdraw" name="CashWithdrawNote" id="CashWithdrawNote" cols="30" rows="2"></textarea></div>
+                    <div class="col-md-3"><input type="number" name="Creidt" id="Creidt" placeholder="Creidt"></div>
+                    <div class="col-md-3"><textarea  placeholder="Note For Creidt " name="CreidtNote" id="CreidtNote" cols="30" rows="2"></textarea></div>
+                    <div class="col-md-3"><input type="number" name="CreidtWithdraw" id="CreidtWithdraw" placeholder="Creidt Withdraw"></div>
+                    <div class="col-md-3"><textarea  placeholder="Note For Creidt Withdraw" name="CreidtWithdrawNote" id="CreidtWithdrawNote" cols="30" rows="2"></textarea></div>
+                    <button class="Add mx-auto my-3" id="AddBtn" >Add</button>
+                    <h5 id="message" class="mx-auto "></h5>
+      
+                    </div>
                 <hr>
-                <div class="row">
                     <div class="totals">
                         <div class="row debosit">
-                        <div class="col-md-4">Total Of Cash : <span  class="NOftotal">1241</span>$ </div>
-                        <div class="col-md-4">Total Of Creidt : <span class="NOftotal">313</span>$ </div>
-                        <div class="col-md-4">Total Of Both : <span class="NOftotal">41</span>$</div>
+                        <div class="col-md-4">Total Of Cash : <span  class="NOftotal" id="TotalOfCash"></span>$ </div>
+                        <div class="col-md-4">Total Of Creidt : <span class="NOftotal" id="TotalOfCreidt"> </span>$ </div>
+                        <div class="col-md-4">Total Of Both : <span class="NOftotal" id="TotalOfBothDeposit"></span>$</div>
                         </div>
                         <br>
                         
                         <div class="row Withdraw" >
-                        <div class="col-md-4">Total Of Cash Withdraw : <span class="NOftotal">34</span>$ </div>
-                        <div class="col-md-4">Total Of Creidt Withdraw : <span class="NOftotal">13</span>$ </div>
-                        <div class="col-md-4">Total Of Both : <span class="NOftotal">43</span>$</div>
-                         </div>
+                        <div class="col-md-4">Total Of Cash Withdraw : <span class="NOftotal" id="TotalOfCashWithdraw"></span>$ </div>
+                        <div class="col-md-4">Total Of Creidt Withdraw : <span class="NOftotal" id="TotalOfCreidtWithdraw"></span>$ </div>
+                        <div class="col-md-4">Total Of Both : <span class="NOftotal" id="TotalOfBothWithdraw"></span>$</div>
+                        </div>
+
+                        <div class="row Total" >
+                        <div class="col-md-4">Total  : <span class="NOftotal" id="TotalOfCashAndCashWithdraw"></span>$ </div>
+                        <div class="col-md-4">Total : <span class="NOftotal"  id="TotalOfCreidtAndCreidtWithdraw"></span>$ </div>
+                        <div class="col-md-4 FinalTotal" >Total : <span class="NOftotal" id="TOTAL"></span>$</div>
+                        </div>
                     </div>
+
+              </form>
+
+                <div class="row">
+                  <button class="Add my-3 mx-auto UpdateBTN"  onclick="module.saveUpdate(this.id)" id="0"  style="display: none;"  >Update</button>
+
+                </div>
+
                 </div>
                 <hr>
                 <div class="row">
@@ -62,13 +77,15 @@
                             <th scope="col">Cash Withdraw</th>
                             <th scope="col">Creidt Withdraw</th>
                             <th scope="col" style="color: rgb(205, 40, 18);" >Total</th>
+                            <th scope="col" style="color: rgb(18, 140, 205);" >Total OF All</th>
                             <th scope="col" >date&Time</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
+                        <tbody id="tbody">
+                          <!-- <tr>
                             <th scope="row">1</th>
                             <td>14<span> $</span></td>
+                            <td>15<span> $</span></td>
                             <td>15<span> $</span></td>
                             <td>15<span> $</span></td>
                             <td>15<span> $</span></td>
@@ -78,33 +95,10 @@
 
                             <td><button >Update</button></td>
                             <td><button class="del">Delete</button></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>14<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>9/11/2023 09:12pm</td>
+                          </tr> -->
+                 
 
-                            <td><button >Update</button></td>
-                            <td><button  class="del">Delete</button></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>14<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>15<span> $</span></td>
-                            <td>9/11/2023 09:12pm</td>
-
-                            <td><button >Update</button></td>
-                            <td><button  class="del">Delete</button></td>
-                          </tr>
+                          
                         </tbody>
                      </table>
                    </div> 
@@ -118,9 +112,12 @@
     </div>
 
     <script src="./asset/bootstrap.bundle.min.js"></script>
+    <script >
+      module ={
 
-    <script src="table2excel.js"></script>
-    <script src="js/index.js"></script>
+      }
+    </script>
+    <script src="js/index.js" type="module"></script>
     
 </body>
 

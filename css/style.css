@@ -116,12 +116,23 @@ th,td{
     margin:  1rem ;
 
 }
+.Total{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: bold;
+    margin:  1rem ;
+
+}
 .NOftotal{
     background-color: rgba(26, 26, 26, 0.619);
    line-height: 1rem;
     padding: 0.3rem;
     border-radius: 5px;
     text-align: center;
+}
+.FinalTotal{
+    color: #ffffff !important;
+    font-weight: bold !important;
 }
 
 .tabel{
